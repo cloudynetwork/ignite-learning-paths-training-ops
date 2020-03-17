@@ -49,8 +49,9 @@ stages:
     - task: HelmDeploy@0
       displayName: 'helm package (tt-cart)'
       inputs:
-        command: package
+        command: 'package'
         chartPath: 'ops40/demos/tailwind-cart-api/cart-api'
+        save: false
         arguments: '--version $(Build.BuildId)'
 
     - task: AzureCLI@1
