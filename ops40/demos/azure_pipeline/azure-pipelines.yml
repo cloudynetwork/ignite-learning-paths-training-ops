@@ -96,7 +96,7 @@ stages:
     - task: HelmDeploy@0
       displayName: 'helm package (tt-cart)'
       inputs:
-        command: package
+        command: 'package'
         chartPath: 'ops40/demos/tailwind-cart-api/cart-api'
         arguments: '--version $(Build.BuildId)'
 
